@@ -82,14 +82,15 @@ article {
 
 /* html, body, div.wrapper, article, p */
 body {
-  /* center horizontally (almost a hack) */
-  margin: 0 auto;
   text-align: center;
 
   background-color: pink;
 }
 
 article {
+  /* center horizontally */
+  margin: 0 auto;
+
   max-width: 550px;
 
   padding: 20px;
