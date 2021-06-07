@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding-top: 50px;
+}
+/*
+  By default all the elements are positioned static.
+  position: static;
+
+  They are in the document flow.
+
+  Different positioning properties:
+  ---------------------------------
+  static (default)
+  relative
+  absolute (takes the element out of the Document flow)
+  fixed (takes the element out of the Document flow)
+  sticky (i'm not sure about this one)
+
+*/
+
+article {
+  max-width: 300px;
+
+  margin: 30px auto 0; /* T R&L B */
+  padding: 20px;
+
+  border: 2px solid pink;
+
+  /* does not affect anything, until this element gets a top, right, bottom, left property */
+  /* and it stays in the document flow */
+  position: relative;
+
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  /* overwriting the user agent stylesheet */
+  margin: .5em 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 5px 3px;
+
+  /* Properties to modify the position are:
+      - top
+      - right
+      - bottom
+      - left
+
+    Values to these properties can be:
+      - numerical (20px, 1em, 0)
+      - percentage - measurement of the containing block (20%)
+      - keywords (auto)
+
+      https://developer.mozilla.org/en-US/docs/Web/CSS/top
+  */
+
+  position: absolute;
+  /*
+  takes the element out of document flow */
+  /*
+  and positions it to the closest positioned ancestor
+  (in our case <main> that has position: relative;)
+  */
+  /* if none exists, it is positioned to the <body> element */
+  top: 30px;
+  left: -20px;
+
+  color: white;
+  font-weight: normal;
+  font-family: monospace;
+  /*  text-shadow: x-offset y-offset blur color; */
+  text-shadow: 1px 1px 2px #2393ac;
+
+  background-color: #47b2ca;
+
+  border: 1px solid #2393ac;
+  border-radius: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.floated-image {
+  width: 50%;
+  /* to float an element use the float property */
+  /* the values can be: left, right or none (default) */
+  float: right;
+  /* push the wrapped text 10px from the left image border  */
+  margin-left: 10px;
+}
+
+header {
+  padding: 10px 0;
+
+  position: fixed;
+  /* takes it out of the document flow,
+   so we need to make space for it by f.ex adding padding-top to the <body>  */
+  /* the width value falls to auto, so we need to set it */
+  width: 100%;
+  /* where do we want to position it */
+  top: 0px;
+  left: 0px;
+
+  font-family: monospace;
+  text-align: center;
+  color: #fff;
+  background-color: #47b2ca;
+}
