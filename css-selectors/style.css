@@ -1,0 +1,21 @@
+/* element selector */
+li {
+  font-size: 2em;
+}
+/* class name (can be used multiple times) */
+.special {
+  background: yellow
+}
+/* ID selector */
+#unique {
+  background-color: pink;
+}
+/* if you have more class names, separate them with space in HTML and CSS */
+.bigger {
+  font-size: 3em;
+  background-color: red;
+}
+/*selecting only an element with both class names  */
+.special.bigger {
+  color: yellow;
+}
