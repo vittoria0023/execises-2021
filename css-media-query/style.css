@@ -1,0 +1,19 @@
+/*
+from larger to smaller browser window
+*/
+body {
+  background-color: beige;
+}
+/* start of media query */
+@media (max-width: 700px) {
+  body {
+    background-color: mediumaquamarine;
+  }
+}
+/* end of media query */
+
+@media (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
