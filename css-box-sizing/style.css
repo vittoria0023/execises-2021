@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+article {
+  margin: 50px 0;
+  padding: 50px;
+
+  width: 50%;
+  height: 200px;
+
+  background-color: pink;
+  border: 50px solid red;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  /* by default:  */
+  /* box-sizing: content-box; */
+
+  /* to achieve 50% you would need to make a calculation */
+  /* instead of width: 50% */
+  /* width: calc(50% - 200px); */
+}
+
+/* HOW TO SET A DOCUMENT TO USE box-sizing: border-box; */
+/* at the begining of your CSS file set: */
+* {
+  box-sizing: border-box;
+}
