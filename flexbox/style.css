@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h2, p {
+  margin: 0;
+}
+
+h3 {
+  color: white;
+  font-size: 15vw;
+
+  text-align: center;
+  text-shadow: 5px 5px 0px hotpink;
+}
+
+main {
+  border: 1px solid pink;
+}
+
+article {
+  padding: 1em;
+  border: 1px solid pink;
+}
+
+section {
+  height: 100vh;
+  background-color: pink;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li a {
+  padding: 2px 15px;
+
+  background-color: yellow;
+  color: black;
+  text-transform: uppercase;
+}
+
+.gradient-bg {
+  background-color: rgba(255, 192, 203, 1);
+
+  background: linear-gradient(5.5deg,pink, hotpink);
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient() */
+}
+
+/* Flexbox */
+.flex-container {
+  /* creates a flex container and all it's childrem become flex items */
+  display: flex;
+  /* Which is the MAIN axis and what direction */
+  flex-direction: row;
+  /* wrap */
+  flex-wrap: wrap;
+
+  /* alignment across the MAIN axis */
+  justify-content: center;
+  /* alignment across the CROSS axis */
+  align-items: center;
+}
+
+
+.flex-item {
+  /* FLEX SIZING */
+  /* unit 1em, 20% or keyword: auto or content */
+  flex-basis: 50%;
+  /* 1 or 0 */
+  flex-shrink: 1;
+  /* 0, 1, or more */
+  flex-grow: 0;
+}
+
+@media (max-width: 550px) {
+  .flex-item {
+    flex-basis: 100%;
+  }
+
+  .flex-nav {
+    /* change the direction for screens smaller than 550px */
+    flex-direction: column;
+    /* align to start on the cross axis for screens smaller than 550px */
+    align-items: flex-start;
+  }
+}
+
+

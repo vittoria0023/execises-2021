@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  border: 1px solid pink;
+}
+
+article {
+  padding: 1em;
+  border: 1px solid pink;
+}
+
+.grid-container {
+  padding: 20px;
+  /* creates a grid container and all it's childrem become grid items */
+  display: grid;
+  /* to define the column design we use: */
+  grid-template-columns: 1fr 2fr 1fr;
+
+  /* Adding space between the cells */
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
+
+
+.grid-item-special {
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+  /* shorter */
+  grid-row: 1/2;
+
+  background-color: yellow;
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-item-special {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
